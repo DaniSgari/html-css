@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #858484;
+            margin: 0px;
+            
+        }
+        header {
+            text-align: center;
+            background-color: #bababa;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid #757171;
+        }
+        main{
+            padding: 10px;
+            margin: 5px;
+          }
+         
+        nav > a {
+            background-color: #333;
+            color: azure;
+            text-decoration: none;
+            box-shadow:2px 2px 2px rgba(0, 0, 0, 0.441) 
+            
+        }
+        nav > a:hover {
+            color: #64ff1d;
+            text-decoration: underline;
+        }
+
+        section {
+            background-color: #d0d0d0;
+            padding: 0px;
+            margin: 2px;
+            border: 5px solid #757171;
+        }
+        article {
+            background-color: #a8a7a7;
+            padding: 5px;
+            margin: 5px;
+            border: 2px;
+           
+        }
+        aside {
+            background-color: #575757;
+            padding: 5px;
+            margin: 5px;
+            
+        }
+        #assuntos {
+            background-color: #d0d0d0;
+            padding: 5px;
+            margin: 5px;
+            border: 2px solid #757171;
+            border-radius: 20px;
+        }
+        #noticias {
+            background-color: #d0d0d0;
+            padding: 5px;
+            margin: 5px;
+            border: 2px solid #757171;}
+        div#bola {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            margin: 5px;
+            border-radius: 50%;
+
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site!</h1>
+        <nav>
+            <a href="#">Link1</a>
+            <a href="#">Link1</a>
+            <a href="#">Link1</a>
+            <a href="#">Link1</a>
+            <a href="#">Link1</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Esportes e Tecnologia</p>
+        </section>
+        <section id="noticias"> 
+            <article>
+                <h2>Noticia 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia tempora harum perferendis tempore dicta earum iste quis. Deserunt id, nesciunt quaerat fugiat culpa sapiente est et possimus, nihil facilis distinctio!
+            </article>   
+            <aside>
+                Artigo escrito por <strong>Fulano</strong> em <time datetime="2023-10-01">01/10/2023</time>
+            </aside>        
+
+        </section>
+    </main>
+    <div id="bola"></div>
+    <footer>
+        <p>&copy; 2025 Meu site. Todos os direitos reservados.</p>        
+    </footer>
+
+</body>
+</html>

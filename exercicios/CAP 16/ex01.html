@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 16</title>
+    <style>
+        body{
+            background-color: rgb(164, 188, 188);
+            font: normal 16px Arial, sans-serif;
+
+        }
+        h1{
+            color: rgb(9, 9, 101);
+            text-align: center;
+
+            height: 100px   /*Altura da caixa*/;
+            width: 300px    /*Largura da caixa*/;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /*Shorthand padding: top-right-bottom-left*/
+            padding: 10px 10px 10px 10px;
+            /*ou apenas padding:10px, pois todas tem a mesma medida - ou apenas valores separados por vertical e horizontal padding:10px 20px*/
+
+
+            border-width: 10px;
+            border-style: solid;
+            border-color: rgb(243, 207, 5);
+            /*Shorthand 
+            borde= width-style-color*/
+            border: 10px solid rgb(243, 207, 5);
+            
+            
+            outline: 5px dashed rgb(58, 50, 5);
+        }
+        .t1{
+            color: rgb(238, 45, 45);
+            text-align: center;
+            font-size: 2em;
+            padding: 20px;
+            border-style: solid;
+            border-width: 20px;
+        }
+        p{
+            color: rgb(0, 0, 0);
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="t1">Modelo de caixas</h1>
+    <p>O modelo de caixas é um conceito fundamental no CSS que descreve como os elementos HTML são representados na página. Cada elemento é tratado como uma caixa retangular, e o modelo de caixas define como essas caixas interagem entre si.</p>
+    <p>O modelo de caixas é composto por quatro partes principais: conteúdo, preenchimento, borda e margem. O conteúdo é a parte interna da caixa, onde o texto e as imagens são exibidos. O preenchimento é o espaço entre o conteúdo e a borda da caixa. A borda envolve o preenchimento e o conteúdo, e a margem é o espaço externo que separa a caixa de outros elementos.</p>
+    <p>O modelo de caixas é importante porque afeta o layout e a aparência dos elementos na página. Compreender como funciona o modelo de caixas é essencial para criar layouts responsivos e atraentes.</p>
+    <h2>Tipos de caixas</h2>
+    <p>Existem dois tipos principais de caixas no CSS caixas de bloco e caixas em linha. As caixas de bloco (div) ocupam toda a largura disponível e começam em uma nova linha, enquanto as caixas em linha (span)ocupam apenas o espaço necessário e podem ser exibidas na mesma linha que outros elementos.</p>
+    <a href="https://youtu.be/3ZFYXkzXhqE?si=9O6gI-UX2OSPDMlY">Aula sobre caixas com todas as tags de cada caixa</a>
+    <h1>Entendendo</h1>
+
+    <p>Propriedades das caixas:
+        por padrão h1 é display block, ou seja, ocupa toda a largura da tela. Para mudar isso podemos usar o display inline.
+        <ul>
+            <li>box-sizing</li>
+            <li>width</li>
+            <li>height</li>
+            <li>padding</li>
+            <li>border</li>
+            <li>outline</li>
+            <li>margin</li>
+        </ul>
+    </p>
+    <p>Para deixar a caixa centralizada podemos usar a margem auto</p>
+    veja o próximo link...
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div > p { 
+            display: none;
+        }
+        div:hover {
+            color: #00f;
+        }
+        div:hover > p {
+            display: contents;
+            color: #ca1616;
+            background-color: #000;
+            width: 300px;
+        }
+        div {
+            display: inline-block;
+            background-color: #ccc;
+            border: 1px solid #000;
+            width: 200px;
+            text-align: center;
+            height: 80px;
+            font-size: 24px;
+            ;
+        }
+        #d1:hover {
+            background-color: #f00;
+            color: #fff;
+        }
+        #d2:hover {
+            background-color: #0f0;
+            color: #fff;
+        }
+        #d3:hover {
+            background-color: #00f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+
+    <h1>Revelando um elemento</h1>
+    <p>Quando o mouse passa por cima de um elemento, o elemento é revelado.</p>
+    <div>
+        Passe o mouse por cima de mim!
+        <p>TEXTO ESCONDIDO...</p> 
+    </div>
+    
+</body>
+</html>

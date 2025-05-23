@@ -1,0 +1,21 @@
+@charset "UTF-8";
+body {
+    background-color: #8aebe7;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    background-color: #fff8f8;
+    color: #1b0541;
+    text-align: center;
+}       
+p {
+    color: #272323;
+    line-height: 1;
+    margin: 20px 0;
+}   
+a {
+    color: #a56ce1;
+    text-decoration: none;
+}

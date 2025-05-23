@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resumo HTML & CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1, h2 {
+      color: #0b5394;
+    }
+    section {
+      background-color: #fff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    code, pre {
+      background-color: #e8f0fe;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #d9eaf7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Resumo HTML & CSS</h1>
+
+  <section>
+    <h2>🔹 Estrutura Básica do HTML</h2>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Título&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Conteúdo aqui
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>🔹 Tags de Estrutura</h2>
+    <table>
+      <tr><th>Tag</th><th>Descrição</th></tr>
+      <tr><td>&lt;html&gt;</td><td>Raiz do documento</td></tr>
+      <tr><td>&lt;head&gt;</td><td>Metadados e links</td></tr>
+      <tr><td>&lt;body&gt;</td><td>Conteúdo visível</td></tr>
+      <tr><td>&lt;header&gt;</td><td>Cabeçalho</td></tr>
+      <tr><td>&lt;nav&gt;</td><td>Navegação</td></tr>
+      <tr><td>&lt;main&gt;</td><td>Principal conteúdo</td></tr>
+      <tr><td>&lt;section&gt;</td><td>Seções de conteúdo</td></tr>
+      <tr><td>&lt;article&gt;</td><td>Artigo independente</td></tr>
+      <tr><td>&lt;aside&gt;</td><td>Conteúdo lateral</td></tr>
+      <tr><td>&lt;footer&gt;</td><td>Rodapé</td></tr>
+      <tr><td>&lt;div&gt;</td><td>Contêiner genérico</td></tr>
+      <tr><td>&lt;span&gt;</td><td>Texto inline</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 Tags de Conteúdo</h2>
+    <table>
+      <tr><th>Tag</th><th>Descrição</th></tr>
+      <tr><td>&lt;h1&gt; a &lt;h6&gt;</td><td>Títulos</td></tr>
+      <tr><td>&lt;p&gt;</td><td>Parágrafo</td></tr>
+      <tr><td>&lt;a href=""&gt;</td><td>Link</td></tr>
+      <tr><td>&lt;img src=""&gt;</td><td>Imagem</td></tr>
+      <tr><td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</td><td>Listas</td></tr>
+      <tr><td>&lt;strong&gt;, &lt;em&gt;</td><td>Negrito e itálico semântico</td></tr>
+      <tr><td>&lt;br&gt;</td><td>Quebra de linha</td></tr>
+      <tr><td>&lt;hr&gt;</td><td>Linha horizontal</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔹 Formulários</h2>
+    <table>
+      <tr><th>Tag</th><th>Descrição</th></tr>
+      <tr><td>&lt;form&gt;</td><td>Formulário</td></tr>
+      <tr><td>&lt;input&gt;</td><td>Campo de entrada</td></tr>
+      <tr><td>&lt;label&gt;</td><td>Rótulo para input</td></tr>
+      <tr><td>&lt;textarea&gt;</td><td>Área de texto</td></tr>
+      <tr><td>&lt;button&gt;</td><td>Botão</td></tr>
+      <tr><td>&lt;select&gt;, &lt;option&gt;</td><td>Menu suspenso</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🟩 CSS – Estilização</h2>
+    <p><strong>Formas de uso:</strong></p>
+    <ul>
+      <li>Inline: <code>&lt;p style="color:red;"&gt;</code></li>
+      <li>Interno: <code>&lt;style&gt; ... &lt;/style&gt;</code></li>
+      <li>Externo: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
+    </ul>
+
+    <p><strong>Seletores:</strong></p>
+    <pre><code>* { }
+body { }
+h1 { }
+.class { }
+#id { }</code></pre>
+
+    <p><strong>Propriedades CSS comuns:</strong></p>
+    <table>
+      <tr><th>Propriedade</th><th>Exemplo</th></tr>
+      <tr><td>color</td><td>color: red;</td></tr>
+      <tr><td>background-color</td><td>background-color: blue;</td></tr>
+      <tr><td>font-size</td><td>font-size: 16px;</td></tr>
+      <tr><td>font-family</td><td>font-family: Arial;</td></tr>
+      <tr><td>text-align</td><td>text-align: center;</td></tr>
+      <tr><td>margin</td><td>margin: 20px;</td></tr>
+      <tr><td>padding</td><td>padding: 10px;</td></tr>
+      <tr><td>border</td><td>border: 1px solid black;</td></tr>
+      <tr><td>display</td><td>display: flex;</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2>🟩 Propriedades CSS Avançadas</h2>
+    <table>
+      <tr><th>Propriedade</th><th>Descrição</th><th>Exemplo</th></tr>
+      <tr>
+        <td>box-shadow</td>
+        <td>Sombra ao redor do elemento</td>
+        <td><code>box-shadow: 2px 2px 5px rgba(0,0,0,0.2);</code></td>
+      </tr>
+      <tr>
+        <td>background-image</td>
+        <td>Imagem de fundo</td>
+        <td><code>background-image: url('img.jpg');</code></td>
+      </tr>
+      <tr>
+        <td>margin</td>
+        <td>Espaço externo</td>
+        <td><code>margin: 20px 10px;</code></td>
+      </tr>
+      <tr>
+        <td>padding</td>
+        <td>Espaço interno</td>
+        <td><code>padding: 10px 20px;</code></td>
+      </tr>
+      <tr>
+        <td>border-radius</td>
+        <td>Arredonda bordas</td>
+        <td><code>border-radius: 8px;</code></td>
+      </tr>
+      <tr>
+        <td>text-shadow</td>
+        <td>Sombra no texto</td>
+        <td><code>text-shadow: 1px 1px 3px gray;</code></td>
+      </tr>
+      <tr>
+        <td>position</td>
+        <td>Posicionamento (static, relative, absolute, fixed)</td>
+        <td><code>position: absolute;</code></td>
+      </tr>
+      <tr>
+        <td>z-index</td>
+        <td>Camada de sobreposição</td>
+        <td><code>z-index: 10;</code></td>
+      </tr>
+      <tr>
+        <td>transition</td>
+        <td>Animação suave de propriedades</td>
+        <td><code>transition: all 0.3s ease;</code></td>
+      </tr>
+    </table>
+  </section>
+  
+  <section>
+    <h2>🎯 Dicas Extras: Pseudo-classes e Responsividade</h2>
+    <ul>
+      <li><strong>:hover</strong> – Aplica estilo quando o mouse passa por cima<br>
+        <code>button:hover { background-color: green; }</code>
+      </li>
+      <li><strong>@media</strong> – Cria estilos para tamanhos de tela específicos (responsivo)<br>
+        <code>@media (max-width: 768px) {
+          body { font-size: 14px; }
+        }</code>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>🧱 Flexbox – Layout Flexível</h2>
+    <pre><code>display: flex;
+  justify-content: center;   /* Alinha no eixo principal */
+  align-items: center;       /* Alinha no eixo cruzado */</code></pre>
+    <p><strong>Outros valores úteis:</strong></p>
+    <ul>
+      <li><code>flex-direction: row | column;</code></li>
+      <li><code>gap: 10px;</code> (espaço entre itens)</li>
+      <li><code>flex-wrap: wrap;</code> (quebra em várias linhas)</li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>📐 Grid Layout – Layout em Grade</h2>
+    <pre><code>display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;</code></pre>
+    <ul>
+      <li><code>1fr</code> significa "1 fração" do espaço disponível</li>
+      <li><code>grid-template-rows</code> define linhas</li>
+      <li><code>grid-column</code> e <code>grid-row</code> posicionam os elementos</li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>📏 Unidades CSS Comuns</h2>
+    <table>
+      <tr><th>Unidade</th><th>Uso</th></tr>
+      <tr><td>px</td><td>Pixels – tamanho fixo</td></tr>
+      <tr><td>%</td><td>Porcentagem – relativo ao elemento pai</td></tr>
+      <tr><td>em</td><td>Relativo ao <em>tamanho da fonte atual</em></td></tr>
+      <tr><td>rem</td><td>Relativo ao <em>tamanho da fonte da raiz</em> (html)</td></tr>
+      <tr><td>vh / vw</td><td>Altura e largura da tela (viewport)</td></tr>
+    </table>
+  </section>
+  
+  <section>
+    <h2>🎞️ Animações com @keyframes</h2>
+    <pre><code>@keyframes desvanecer {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  .elemento {
+    animation: desvanecer 1s ease-in-out;
+  }</code></pre>
+  </section>
+  
+  <section>
+    <h2>🎨 Variáveis CSS</h2>
+    <pre><code>:root {
+    --cor-primaria: #3498db;
+    --tamanho-fonte: 16px;
+  }
+  
+  body {
+    color: var(--cor-primaria);
+    font-size: var(--tamanho-fonte);
+  }</code></pre>
+    <p>Útil para manter estilos consistentes e fáceis de alterar.</p>
+  </section>
+  <section>
+    <h2>🌐 Seletor Universal: <code>*</code></h2>
+    <p>O seletor <code>*</code> aplica estilos a <strong>todos os elementos</strong> da página. Muito usado para resetar margens e paddings padrão dos navegadores.</p>
+  
+    <pre><code>/* Reset básico recomendado */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }</code></pre>
+  
+    <ul>
+      <li><strong>margin: 0</strong> – Remove espaçamentos externos padrão</li>
+      <li><strong>padding: 0</strong> – Remove espaçamentos internos padrão</li>
+      <li><strong>box-sizing: border-box</strong> – Faz com que padding e border não aumentem a largura total</li>
+    </ul>
+  
+    <p><strong>Dica:</strong> coloque esse reset no início do seu CSS para ter mais controle sobre o layout.</p>
+  </section>
+  
+</body>
+</html>

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*
+em HTML é id em CSS é #(id)
+o id é único, ou seja, só pode existir um id por página.
+em HTML é class em CSS é .(class)
+a class pode existir várias vezes na mesma página.
+a class é um estilo que pode ser aplicado a vários elementos.elementos podem ter mais de uma class.
+
+*/
+body{
+    background-color: rgba(169, 241, 217, 0.73);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: rgb(12, 84, 86);
+}
+h1#principal {
+    text-align: center;
+    font-size: 2.5em;
+    background-color: seashell;
+    color: rgb(4, 36, 31);
+}
+h2{
+    color: rgb(51, 141, 141);
+}
+.basico{
+    color: rgb(183, 183, 241);
+
+}
+.intermediaro{
+    color: rgb(57, 57, 247);
+
+}
+.avançado{
+    color: blue;
+}
+.destaque{
+    background-color: rgba(31, 86, 59, 0.412);
+}

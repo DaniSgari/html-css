@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Mídias</title>
+</head>
+<body>
+    <h1>Imagem responsiva</h1>
+    <p>Para abrir este site em dispositivos diferentes ou simplesmente aumente ou diminua o tamanho do seu navegador.</p>
+    <p>O tamanho da imagem muda de acordo com o tamanho do navegador adicione: width 100% e as demais informação como no cod a seguir...</p>
+    <picture>
+        <img srcset="imagens/foto-p.png 500w,
+                    imagens/foto-m.png 1000w,
+                    imagens/foto-g.png 1500w"
+             sizes="(max-width: 500px) 500px,
+                    (max-width: 1000px) 1000px,
+                    (max-width: 1500px) 1500px"
+             src="imagens/foto-g.png" alt="imagem sem conteudo apenas para demonstração"></img>
+        <h1>Arquivos como mp3</h1>
+        <p>É possivel baixar músicas em Youtube Studio, e sempre tomar muito cuidado com direitos autorais </p>
+        <h2>Reproduzindo Audio</h2>
+        <audio src="midia-mp3/guanacast-33-podcast.mp3"controls
+        autoplay></audio>
+        <p>outra opção que torna posiivel a reprodução em outros navegadores é usar o tipo de arquivo, como no exemplo abaixo:</p>
+        <audio preload="metadata" controls>
+            <source src="midia-mp3/guanacast-33-podcast.mp3" type="audio/mpeg"
+            src="midia-mp3/guanacast-33-podcast.ogg" type="audio/ogg">
+            <p>Infelizmente o seu navegador não consegue reproduzir o áudio. <a href="midia-mp3/guanacast-33-podcast.mp3">Clique aqui para baixar o arquivo MP3.</a></p>
+        </audio>
+        </p>
+<h1>Bora falar de videos agora!</h1>
+<p>O ideal é usar varios formatos para melhor compatibilidade.
+Temos uma ferramenta que pode ajudar na formatação de videos chamado HandBrake
+</p>
+<h2>Agora vamos inserir videos hospedados na meu próprio servidor com varios formatos</h2>
+<p> Formatos recomendados são: mp4;ogg;m4v;webm.</p>
+<video width="560" controls loop poster="imagens/capa.videoleve.png">
+<source src="midia-videos/Video-Pessoas.webm" type="video/webm">
+<source src="midia-videos/video-pessoas.original.mp4" type="video/mp4">
+</video>
+<h2>Videos não hospedados</h2>
+<p>Podemos usar videos hospedados em outros servidores, como o Youtube, Vimeo e etc.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=1s56khr7xvPXd627" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

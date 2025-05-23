@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* MEDIDAS ABSOLUTAS:
+cm, mm, in, px, pt, pc, px;
+MEDIDAS RELATIVAS:
+em, ex, ch, rem, vw, vh  
+16px= 1 em*/
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to left,#D9725B,#F2CEA2);
+    font-size: 1em;
+    
+    
+}
+main{
+    background-color: white ;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    box-shadow: #a62933ab 10px 10px 20px;
+}
+h1{
+    font-size: 2.5em;
+    color: #A62934 ;
+    text-align: center;
+    text-shadow: 1px 1px 2px #a62933b7;
+    font-weight: bolder;
+    font-style: italic;
+    /*Shorthand font
+    style->weight->size->family
+    EX:
+    font: italic bolder 2.5em Georgia, 'Times New Roman', Times, serif;*/
+    */
+    
+}
+   h2{
+    font: oblique bold 1.8em Georgia, 'Times New Roman', Times, serif;
+    color: #D93636;
+    text-shadow: 1px 1px 2px #D93636;}
+    p{
+        text-align: justify;
+    }
