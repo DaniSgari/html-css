@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo Backgrounds</title>
+    <style>
+        body {
+            
+            background-size: 100px 100px;
+            background-repeat: repeat;
+            
+        }
+        div.bloco {
+            background-image: url(imagens/wallpaper002.jpg);
+
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        div#q1 {
+            background-position: left top;
+            /* A posição do background é definida como a parte superior esquerda do elemento,sendo assim o backgriund posicion defini qual a ancora da imagem */
+          }
+        div#q2 {
+            background-position: right bottom;
+        }
+        div#q3 {
+            background-position: center center;
+            /* para ficar no centro da pág precisa por height:100vh no background*/        }
+        div#q4 {
+            background-position: right top;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bloco" id="q1">
+
+    </div>
+    <div class="bloco" id="q2">
+
+    </div>
+    <div class="bloco" id="q3">
+
+    </div>
+     <div class="bloco" id="q4">
+
+    </div>
+    
+</body>
+</html>
