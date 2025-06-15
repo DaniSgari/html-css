@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resumo HTML - Formulários</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 3px solid #ccc;
+    }
+    code {
+      background-color: #e8e8e8;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    input, select, textarea, button {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Resumo HTML – Formulários</h1>
+
+  <section>
+    <h2>1. O que é um formulário?</h2>
+    <p>O elemento <code>&lt;form&gt;</code> é usado para coletar dados do usuário. Ele pode conter campos de texto, botões, caixas de seleção, listas e muito mais.</p>
+
+    <pre><code>&lt;form action="processa.php" method="post"&gt;
+  ...
+&lt;/form&gt;</code></pre>
+
+    <ul>
+      <li><strong>action</strong>: define para onde os dados serão enviados.</li>
+      <li><strong>method</strong>: pode ser <code>get</code> ou <code>post</code>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Campos básicos</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" />
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" />
+    </form>
+
+    <pre><code>&lt;input type="text"&gt;
+&lt;input type="email"&gt;
+&lt;input type="password"&gt;
+&lt;input type="number"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>3. Seleções e opções</h2>
+    <form>
+      <label for="genero">Gênero:</label>
+      <select id="genero" name="genero">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label>Preferências:</label>
+      <input type="checkbox" id="html" name="preferencias" value="html">
+      <label for="html">HTML</label>
+      <input type="checkbox" id="css" name="preferencias" value="css">
+      <label for="css">CSS</label>
+
+      <label>Notificações:</label>
+      <input type="radio" id="sim" name="notificar" value="sim">
+      <label for="sim">Sim</label>
+      <input type="radio" id="nao" name="notificar" value="nao">
+      <label for="nao">Não</label>
+    </form>
+
+    <pre><code>&lt;select&gt;...&lt;/select&gt;
+&lt;input type="checkbox"&gt;
+&lt;input type="radio"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>4. Áreas de texto</h2>
+    <form>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
+    </form>
+
+    <pre><code>&lt;textarea name="mensagem"&gt;&lt;/textarea&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>5. Botões</h2>
+    <form>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar</button>
+    </form>
+
+    <pre><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;button type="reset"&gt;Limpar&lt;/button&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>6. Atributos úteis em formulários</h2>
+    <ul>
+      <li><code>required</code>: campo obrigatório</li>
+      <li><code>placeholder</code>: dica dentro do campo</li>
+      <li><code>value</code>: valor padrão</li>
+      <li><code>readonly</code>: somente leitura</li>
+      <li><code>disabled</code>: desativado</li>
+    </ul>
+
+    <pre><code>&lt;input type="text" placeholder="Digite seu nome" required&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>7. Exemplo completo</h2>
+    <form action="#" method="post">
+      <label for="nome2">Nome:</label>
+      <input type="text" id="nome2" name="nome2" placeholder="Seu nome" required>
+
+      <label for="email2">Email:</label>
+      <input type="email" id="email2" name="email2" required>
+
+      <label for="mensagem2">Mensagem:</label>
+      <textarea id="mensagem2" name="mensagem2" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</body>
+</html>

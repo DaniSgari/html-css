@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Resumo Completo sobre Tabelas em HTML e CSS</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    background: #fdfdfd;
+    color: #222;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    color: #2c3e50;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse; /* junta bordas */
+    margin-bottom: 2rem;
+  }
+  thead {
+    background-color: #34495e;
+    color: white;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: left;
+    vertical-align: middle; /* alinhamento vertical */
+  }
+  /* Efeito zebrado: linhas pares com fundo cinza claro */
+  tbody tr:nth-child(2n) {
+    background-color: #f9f9f9;
+  }
+  /* Efeito hover para destacar linha */
+  tbody tr:hover {
+    background-color: #d1e7fd;
+  }
+  /* Explicação estilo */
+  .explanation {
+    background: #eef6f9;
+    border-left: 5px solid #3498db;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: #555;
+  }
+  pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+  }
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+  }
+  /* Tabela responsiva simples */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Resumo Completo sobre Tabelas em HTML e CSS</h1>
+
+  <section>
+    <h2>1. Estrutura Básica de uma Tabela</h2>
+    <p>Uma tabela HTML é composta por:</p>
+    <ul>
+      <li><code>&lt;table&gt;</code>: elemento pai da tabela</li>
+      <li><code>&lt;thead&gt;</code>: cabeçalho da tabela</li>
+      <li><code>&lt;tbody&gt;</code>: corpo da tabela</li>
+      <li><code>&lt;tr&gt;</code>: linha da tabela</li>
+      <li><code>&lt;th&gt;</code>: célula de cabeçalho (normalmente no <code>thead</code>)</li>
+      <li><code>&lt;td&gt;</code>: célula de dados (no <code>tbody</code>)</li>
+    </ul>
+
+    <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Cabeçalho 1&lt;/th&gt;
+      &lt;th&gt;Cabeçalho 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dado 1&lt;/td&gt;
+      &lt;td&gt;Dado 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>2. Estilização Básica</h2>
+    <p>Para uma tabela visualmente agradável, use:</p>
+    <ul>
+      <li><code>border-collapse: collapse;</code> para bordas unidas</li>
+      <li>bordas nas células com <code>border</code></li>
+      <li>padding para espaçamento interno</li>
+      <li>alinhamento vertical com <code>vertical-align</code></li>
+      <li>estilo para cabeçalho (<code>thead</code>) com fundo e cor diferente</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Efeito Zebrado com <code>nth-child(2n)</code></h2>
+    <div class="explanation">
+      O seletor <code>tbody tr:nth-child(2n)</code> seleciona todas as linhas pares do <code>tbody</code> da tabela, aplicando estilos diferentes para criar o efeito zebrado.
+    </div>
+    <table>
+      <thead>
+        <tr><th>Nome</th><th>Idade</th><th>Cidade</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>João</td><td>28</td><td>São Paulo</td></tr>
+        <tr><td>Maria</td><td>34</td><td>Rio de Janeiro</td></tr>
+        <tr><td>Carlos</td><td>22</td><td>Belo Horizonte</td></tr>
+        <tr><td>Ana</td><td>29</td><td>Curitiba</td></tr>
+        <tr><td>Pedro</td><td>40</td><td>Fortaleza</td></tr>
+      </tbody>
+    </table>
+
+    <pre><code>tbody tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>4. Outros Efeitos Comuns</h2>
+    <ul>
+      <li><strong>Hover:</strong> destacar linha quando o mouse passa por cima</li>
+      <li><strong>Alinhamento vertical:</strong> usar <code>vertical-align: middle;</code> para centralizar texto verticalmente</li>
+      <li><strong>Bordas:</strong> garantir bordas claras e bem definidas</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Produto</th><th>Preço</th><th>Quantidade</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Teclado</td><td>R$120,00</td><td>15</td></tr>
+        <tr><td>Mouse</td><td>R$70,00</td><td>30</td></tr>
+        <tr><td>Monitor</td><td>R$850,00</td><td>7</td></tr>
+        <tr><td>Notebook</td><td>R$3.200,00</td><td>5</td></tr>
+      </tbody>
+    </table>
+
+    <pre><code>tbody tr:hover {
+  background-color: #d1e7fd;
+}
+
+th, td {
+  vertical-align: middle;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>5. Tabela Responsiva Simples</h2>
+    <p>Para tabelas com muitas colunas, use um container com <code>overflow-x: auto;</code> para permitir scroll horizontal em telas pequenas.</p>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th><th>Idade</th><th>Cidade</th><th>Profissão</th><th>Salário</th><th>Empresa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>João</td><td>28</td><td>São Paulo</td><td>Desenvolvedor</td><td>R$4.500</td><td>Empresa A</td></tr>
+          <tr><td>Maria</td><td>34</td><td>Rio de Janeiro</td><td>Designer</td><td>R$3.800</td><td>Empresa B</td></tr>
+          <tr><td>Carlos</td><td>22</td><td>Belo Horizonte</td><td>Analista</td><td>R$3.200</td><td>Empresa C</td></tr>
+          <tr><td>Ana</td><td>29</td><td>Curitiba</td><td>Gerente</td><td>R$5.000</td><td>Empresa D</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <pre><code>.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}</code></pre>
+  </section>
+    <section>
+    <h2>6. Cabeçalho fixo no topo da página (Sticky Header)</h2>
+    <p>Para deixar o cabeçalho da tabela fixo no topo enquanto você rola o conteúdo da tabela, use <code>position: sticky;</code> no <code>&lt;thead&gt;</code> com <code>top: 0;</code>.</p>
+    <p>Isso funciona melhor se a tabela estiver dentro de um container com altura fixa e <code>overflow-y: auto;</code>, para que o scroll seja interno.</p>
+
+    <div style="max-height: 200px; overflow-y: auto; border: 1px solid #ccc;">
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>Idade</th><th>Cidade</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>João</td><td>28</td><td>São Paulo</td></tr>
+          <tr><td>Maria</td><td>34</td><td>Rio de Janeiro</td></tr>
+          <tr><td>Carlos</td><td>22</td><td>Belo Horizonte</td></tr>
+          <tr><td>Ana</td><td>29</td><td>Curitiba</td></tr>
+          <tr><td>Pedro</td><td>40</td><td>Fortaleza</td></tr>
+          <tr><td>Lucas</td><td>31</td><td>Porto Alegre</td></tr>
+          <tr><td>Mariana</td><td>27</td><td>Salvador</td></tr>
+          <tr><td>Felipe</td><td>36</td><td>Brasília</td></tr>
+          <tr><td>Clara</td><td>24</td><td>Recife</td></tr>
+          <tr><td>Rafael</td><td>33</td><td>Fortaleza</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <pre><code>thead {
+  position: sticky;
+  top: 0;
+  background-color: #34495e; /* importante para visual */
+  color: white;
+  z-index: 10; /* para ficar sobre as linhas */
+}
+
+.container-tabela {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}</code></pre>
+  </section>
+  <section>
+  <h2>7. Usando <code>colspan</code> e <code>rowspan</code> em tabelas</h2>
+
+  <p><strong><code>colspan</code></strong> é usado para fazer uma célula ocupar duas ou mais colunas.</p>
+  <p><strong><code>rowspan</code></strong> é usado para fazer uma célula ocupar duas ou mais linhas.</p>
+
+  <h3>🔸 Exemplo com <code>colspan</code>:</h3>
+  <table>
+    <thead>
+      <tr><th>Nome</th><th colspan="2">Contato</th></tr>
+      <tr><th></th><th>Email</th><th>Telefone</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>João</td><td>joao@email.com</td><td>9999-0001</td></tr>
+      <tr><td>Maria</td><td>maria@email.com</td><td>9999-0002</td></tr>
+    </tbody>
+  </table>
+
+  <pre><code>&lt;th colspan="2"&gt;Contato&lt;/th&gt;</code></pre>
+
+  <h3>🔸 Exemplo com <code>rowspan</code>:</h3>
+  <table>
+    <thead>
+      <tr><th>Dia</th><th>Evento</th></tr>
+    </thead>
+    <tbody>
+      <tr><td rowspan="2">Segunda</td><td>Reunião</td></tr>
+      <tr><td>Treinamento</td></tr>
+      <tr><td>Terça</td><td>Apresentação</td></tr>
+    </tbody>
+  </table>
+
+  <pre><code>&lt;td rowspan="2"&gt;Segunda&lt;/td&gt;</code></pre>
+
+  <p>Esses atributos são úteis quando você precisa organizar melhor visualmente dados agrupados na tabela.</p>
+</section>
+<section>
+  <h2>8. Estilizando colunas com <code>&lt;colgroup&gt;</code> e <code>&lt;col&gt;</code></h2>
+
+  <p>A tag <code>&lt;colgroup&gt;</code> é usada dentro da tabela para aplicar estilos diretamente às <strong>colunas</strong>, sem precisar estilizar célula por célula. Ela contém uma ou mais tags <code>&lt;col&gt;</code>, que representam cada coluna da tabela, na ordem em que aparecem.</p>
+
+  <p>Você pode aplicar estilos como largura, cor de fundo ou bordas usando atributos inline ou classes CSS.</p>
+
+  <h3>🔸 Exemplo prático com estilos por coluna:</h3>
+  <table>
+    <colgroup>
+      <col style="background-color: #f2f2f2; width: 200px;">
+      <col style="background-color: #dff0d8;">
+      <col>
+    </colgroup>
+    <thead>
+      <tr><th>Produto</th><th>Preço</th><th>Estoque</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Teclado</td><td>R$120</td><td>15</td></tr>
+      <tr><td>Mouse</td><td>R$70</td><td>30</td></tr>
+      <tr><td>Monitor</td><td>R$850</td><td>8</td></tr>
+    </tbody>
+  </table>
+
+  <pre><code>&lt;table&gt;
+  &lt;colgroup&gt;
+    &lt;col style="background-color: #f2f2f2; width: 200px;"&gt;
+    &lt;col style="background-color: #dff0d8;"&gt;
+    &lt;col&gt;
+  &lt;/colgroup&gt;
+  &lt;thead&gt;...&lt;/thead&gt;
+  &lt;tbody&gt;...&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+  <h3>🔸 Usando <code>span</code> para aplicar a várias colunas</h3>
+  <p>Você pode aplicar o mesmo estilo a várias colunas usando o atributo <code>span</code>:</p>
+
+  <pre><code>&lt;colgroup&gt;
+  &lt;col span="2" style="background-color: #e0f7fa;"&gt;
+  &lt;col&gt;
+&lt;/colgroup&gt;
+</code></pre>
+
+  <p>Nesse exemplo, as <strong>duas primeiras colunas</strong> receberão a mesma cor de fundo.</p>
+</section>
+<section>
+  <h2>9. Tabela Responsiva com Scroll Horizontal</h2>
+  
+  <p>Por padrão, tabelas em HTML não são responsivas. Para que funcionem bem em telas pequenas (como celular), é comum colocá-las dentro de um <code>&lt;div&gt;</code> com rolagem horizontal usando <code>overflow-x: auto</code>.</p>
+
+  <div class="tabela-responsiva">
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Preço</th>
+          <th>Estoque</th>
+          <th>Fornecedor</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Teclado</td><td>R$120</td><td>15</td><td>ABC</td><td>10/06</td></tr>
+        <tr><td>Mouse</td><td>R$70</td><td>30</td><td>XYZ</td><td>09/06</td></tr>
+        <tr><td>Monitor</td><td>R$850</td><td>8</td><td>DEF</td><td>08/06</td></tr>
+        <tr><td>Notebook</td><td>R$3.200</td><td>5</td><td>GHI</td><td>07/06</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <style>
+    .tabela-responsiva {
+      overflow-x: auto;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+    }
+
+    .tabela-responsiva table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px; /* Garante que a tabela tenha rolagem se necessário */
+    }
+
+    .tabela-responsiva th,
+    .tabela-responsiva td {
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+      white-space: nowrap; /* Evita quebra de texto */
+    }
+  </style>
+
+  <h3>🧠 Dica:</h3>
+  <p>Use <code>min-width</code> na tabela e <code>white-space: nowrap</code> nas células para forçar a rolagem horizontal quando necessário.</p>
+
+  <h3>📱 Comportamento:</h3>
+  <ul>
+    <li>Em telas grandes, a tabela aparece normalmente.</li>
+    <li>Em telas pequenas, o usuário pode rolar horizontalmente para ver todas as colunas.</li>
+  </ul>
+</section>
+<section>
+  <h2>11. Navegação com links abrindo no &lt;iframe&gt;</h2>
+
+  <p>Podemos criar links que abrem outras páginas dentro do <code>&lt;iframe&gt;</code> usando os atributos <strong><code>name</code></strong> e <strong><code>target</code></strong>.</p>
+
+  <p><strong>Passo a passo:</strong></p>
+  <ol>
+    <li>Adicione um <code>name</code> ao seu iframe (ex: <code>name="conteudo"</code>).</li>
+    <li>Nos links, use <code>target="conteudo"</code> para carregar o conteúdo no iframe.</li>
+  </ol>
+
+  <h3>🔧 Exemplo prático:</h3>
+  <pre><code>&lt;iframe name="conteudo"&gt;&lt;/iframe&gt;
+
+&lt;a href="pagina1.html" target="conteudo"&gt;Abrir Página 1&lt;/a&gt;
+&lt;a href="pagina2.html" target="conteudo"&gt;Abrir Página 2&lt;/a&gt;
+</code></pre>
+
+  <p>Com isso, as páginas clicadas serão carregadas dentro do iframe, sem recarregar a página principal.</p>
+</section>
+
+<section>
+  <h2>12. Exibir conteúdo inicial dentro do &lt;iframe&gt; com <code>srcdoc</code></h2>
+
+  <p>O atributo <code>srcdoc</code> permite escrever HTML direto dentro do iframe, útil para exibir uma <strong>mensagem inicial</strong> enquanto o usuário ainda não clicou em nada.</p>
+
+  <h3>📌 Exemplo:</h3>
+  <pre><code>&lt;iframe 
+  name="conteudo" 
+  srcdoc="&lt;h2&gt;Bem-vindo!&lt;/h2&gt;&lt;p&gt;Escolha uma das opções do menu.&lt;/p&gt;" 
+  width="100%" height="300"&gt;&lt;/iframe&gt;
+</code></pre>
+
+  <p>Esse conteúdo será exibido até que o usuário clique em um link com <code>target="conteudo"</code>, que então carregará uma nova página dentro do iframe.</p>
+</section>
+<section>
+  <h2>13. Segurança e privacidade no uso de &lt;iframe&gt;</h2>
+
+  <h3>🔐 Atributo <code>sandbox</code></h3>
+  <p>
+    O atributo <code>sandbox</code> isola o conteúdo do iframe, impedindo que scripts e ações perigosas sejam executadas.
+    Ao usar apenas <code>sandbox</code>, <strong>todas as permissões são bloqueadas</strong> por padrão.
+  </p>
+
+  <p>Você pode liberar permissões específicas:</p>
+  <ul>
+    <li><code>allow-scripts</code> → permite uso de JavaScript</li>
+    <li><code>allow-forms</code> → permite envio de formulários</li>
+    <li><code>allow-popups</code> → permite abrir novas janelas</li>
+    <li><code>allow-same-origin</code> → permite acesso a cookies se for do mesmo domínio</li>
+  </ul>
+
+  <h4>📌 Exemplo com sandbox:</h4>
+  <pre><code>&lt;iframe 
+  src="pagina.html" 
+  sandbox="allow-scripts allow-forms"&gt;
+&lt;/iframe&gt;</code></pre>
+
+  <h3>🔍 Atributo <code>referrerpolicy</code></h3>
+  <p>
+    Esse atributo controla o que será enviado como "referência" para o site dentro do iframe (a URL da página original). Isso ajuda a proteger a <strong>privacidade do usuário</strong>.
+  </p>
+
+  <ul>
+    <li><code>no-referrer</code> → não envia nenhuma referência</li>
+    <li><code>origin</code> → envia só o domínio de origem (ex: <code>https://meusite.com</code>)</li>
+    <li><code>unsafe-url</code> → envia o URL completo da página (⚠️ menos seguro)</li>
+  </ul>
+
+  <h4>📌 Exemplo com sandbox e referrerpolicy:</h4>
+  <pre><code>&lt;iframe 
+  src="https://exemplo.com"
+  sandbox="allow-scripts"
+  referrerpolicy="no-referrer"&gt;
+&lt;/iframe&gt;</code></pre>
+
+  <p>Esse iframe permite apenas scripts e não envia nenhuma informação sobre a página onde ele está sendo exibido.</p>
+</section>
+
+
+
+  </body>
+</html>
+
+
+

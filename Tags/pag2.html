@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exemplos Visuais - Centralizar Div com CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    h3 {
+      color: #34495e;
+    }
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .example-box {
+      background-color: #3498db;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    /* 1. margin: 0 auto */
+    .example1 .caixa {
+      width: 300px;
+      margin: 0 auto;
+    }
+    /* 2. Flexbox */
+    .example2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      background-color: #ecf0f1;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .example2 .caixa {
+      background-color: #e74c3c;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+    }
+    /* 3. Grid */
+    .example3 {
+      display: grid;
+      place-items: center;
+      height: 150px;
+      background-color: #ecf0f1;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .example3 .caixa {
+      background-color: #2ecc71;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+    }
+    /* 4. Position absolute */
+    .example4 {
+      position: relative;
+      height: 150px;
+      background-color: #ecf0f1;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+    .example4 .centro {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #9b59b6;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+    }
+    h4 {
+      color: #27ae60;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎯 Exemplos Visuais: Como Centralizar uma <code>&lt;div&gt;</code> com CSS</h2>
+  
+  <h3>1. Centralizar Horizontalmente com <code>margin: 0 auto;</code></h3>
+  <div class="example1">
+    <div class="caixa example-box">Caixa Centralizada</div>
+  </div>
+  <pre><code>.caixa {
+  width: 300px;
+  margin: 0 auto;
+}</code></pre>
+  
+  <h3>2. Centralizar com Flexbox (horizontal e vertical)</h3>
+  <div class="example2">
+    <div class="caixa">Caixa Centralizada</div>
+  </div>
+  <pre><code>.example2 {
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical */
+  height: 150px;
+}
+
+.caixa {
+  background-color: #e74c3c;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}</code></pre>
+  
+  <h3>3. Centralizar com Grid</h3>
+  <div class="example3">
+    <div class="caixa">Caixa Centralizada</div>
+  </div>
+  <pre><code>.example3 {
+  display: grid;
+  place-items: center;
+  height: 150px;
+}
+
+.caixa {
+  background-color: #2ecc71;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}</code></pre>
+  
+  <h3>4. Centralizar com Position Absoluta</h3>
+  <div class="example4">
+    <div class="centro">Caixa Centralizada</div>
+  </div>
+  <pre><code>.example4 {
+  position: relative;
+  height: 150px;
+}
+
+.centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9b59b6;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}</code></pre>
+  
+  <h4>💡 Dica</h4>
+  <p>Use <strong>Flexbox</strong> ou <strong>Grid</strong> sempre que possível. São os métodos mais modernos, responsivos e fáceis de manter.<br />
+  Evite usar <code>position: absolute</code> como padrão, pois pode causar problemas em layouts responsivos.</p>
+</body>
+</html>

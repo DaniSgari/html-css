@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resumo HTML & CSS</title>
+  <link rel="shortcut icon" href="download.jpg" type="image/x-icon">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,6 +15,25 @@
     }
     h1, h2 {
       color: #0b5394;
+    }
+    header {
+      background-color: #e3f2fd;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0b5394;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
     }
     section {
       background-color: #fff;
@@ -44,9 +64,17 @@
   </style>
 </head>
 <body>
-
+  
+<header>
+  
   <h1>Resumo HTML & CSS</h1>
-
+  <nav>
+  <a href="pag2.html" target="_blank">Centralizar uma "DIV"</a>
+  <a href="pag3.html" target="_blank">Tabelas</a>
+  <a href="pag4.html" target="_blank">Formulários</a>
+  </nav>
+</header>
+  
   <section>
     <h2>🔹 Estrutura Básica do HTML</h2>
     <pre><code>&lt;!DOCTYPE html&gt;
@@ -285,6 +313,75 @@ h1 { }
   
     <p><strong>Dica:</strong> coloque esse reset no início do seu CSS para ter mais controle sobre o layout.</p>
   </section>
-  
-</body>
+  <section>
+  <h2>🧩 Pseudo-elementos CSS – <code>::before</code> e <code>::after</code></h2>
+  <p>Os pseudo-elementos permitem estilizar partes específicas de um elemento, como adicionar conteúdo antes ou depois dele.</p>
+
+  <pre><code>h1::before {
+  content: "👉 ";
+  color: red;
+}
+
+p::after {
+  content: " ✔️";
+  color: green;
+}
+
+p::first-letter {
+  font-size: 2rem;
+  color: darkblue;
+}
+
+p::first-line {
+  font-weight: bold;
+}</code></pre>
+
+  <ul>
+    <li><code>::before</code> – Adiciona conteúdo antes do elemento</li>
+    <li><code>::after</code> – Adiciona conteúdo depois do elemento</li>
+    <li><code>::first-letter</code> – Estiliza apenas a primeira letra</li>
+    <li><code>::first-line</code> – Estiliza apenas a primeira linha</li>
+  </ul>
+
+  <p><strong>Importante:</strong> para <code>::before</code> e <code>::after</code>, é obrigatório usar <code>content: "";</code>.</p>
+</section>
+<section>
+  <h2>🖼️ Imagem de Fundo (Background Image)</h2>
+  <p>Você pode aplicar uma imagem como fundo de um elemento usando a propriedade <code>background-image</code>.</p>
+
+  <pre><code>body {
+  background-image: url("caminho/da-imagem.jpg");
+  background-size: cover;         /* cobre toda a área */
+  background-position: center;    /* centraliza a imagem */
+  background-repeat: no-repeat;   /* evita repetição */
+}</code></pre>
+
+  <ul>
+    <li><code>background-size: cover</code> – A imagem cobre todo o elemento</li>
+    <li><code>background-position: center</code> – Centraliza a imagem</li>
+    <li><code>background-repeat: no-repeat</code> – Evita que a imagem se repita</li>
+  </ul>
+</section>
+
+<section>
+  <h2>🌄 Efeito Parallax com CSS</h2>
+  <p>O efeito parallax dá a sensação de profundidade, fazendo com que o fundo pareça se mover mais lentamente que o conteúdo ao rolar a página.</p>
+
+  <pre><code>.parallax {
+  background-image: url("caminho/da-imagem.jpg");
+  height: 400px;
+  background-attachment: fixed;     /* fixa o fundo */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}</code></pre>
+
+  <p>Use a classe <code>parallax</code> em uma <code>&lt;div&gt;</code> para criar o efeito:</p>
+
+  <pre><code>&lt;div class="parallax"&gt;&lt;/div&gt;</code></pre>
+
+  <p><strong>Nota:</strong> o efeito <code>background-attachment: fixed</code> pode não funcionar em dispositivos móveis, então teste em diferentes navegadores.</p>
+</section>
+
+ </body>
 </html>
